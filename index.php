@@ -1,5 +1,7 @@
 <?php
 
+include('system/setup.php');
+
 $page = isset($_GET['page']) ? $_GET['page'] : null;
 
 switch($page)
