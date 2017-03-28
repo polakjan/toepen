@@ -1,7 +1,10 @@
 <?php
 
 // config 
-
+define('DBNAME', 'toepen');
+define('DBHOST', 'localhost');
+define('DBUSER', 'root');
+define('DBPASSWORD', '');
 
 
 // bootstrapping
