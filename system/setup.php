@@ -1,6 +1,10 @@
 <?php
 
-// config 
+
+// URL config
+define('BASE_URL', 'http://www.cbp-exercises.local/toepen');
+
+// DB config 
 define('DBNAME', 'toepen');
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');

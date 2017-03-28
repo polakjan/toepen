@@ -6,6 +6,6 @@ class url
     {
         $all_params = array_merge($page ? array('page' => $page) : array(), $params); // page + other params
 
-        return '?'.http_build_query($all_params);
+        return BASE_URL.'?'.http_build_query($all_params);
     }
 }

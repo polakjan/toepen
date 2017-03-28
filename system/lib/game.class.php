@@ -35,4 +35,17 @@ class game
 
     }
 
+    public function playerPlaysGame($player_id, $game_id)
+    {
+        $query = "
+            SELECT *
+            FROM `player_has_game`
+            WHERE `player_has_game`.`player_id` = ?
+              AND `player_has_game`.`game_id` = ?
+        ";
+        $connection = db::find($query, [$player_id, $game_id]);
+
+        return (boolean)$connection;
+    }
+
 }

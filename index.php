@@ -19,4 +19,7 @@ switch($page)
     case 'game':
         include('system/pages/game.php');
         break;
+    case 'api':
+        include('system/pages/api.php');
+        break;
 }
