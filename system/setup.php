@@ -5,6 +5,7 @@ define('DBNAME', 'toepen');
 define('DBHOST', 'localhost');
 define('DBUSER', 'root');
 define('DBPASSWORD', '');
+define('DBCHARSET', 'utf8');
 
 
 // bootstrapping

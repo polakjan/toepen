@@ -26,7 +26,7 @@ class db
                 // connect to the database and store connection it the static property
                 static::$pdo = new PDO(
                     //'mysql:dbname=database_name;host=locahost;charset=utf8',
-                    'mysql:dbname='.DBNAME.';host='.DBHOST.';charset='.config::get('db_encoding', 'utf8'), 
+                    'mysql:dbname='.DBNAME.';host='.DBHOST.';charset='.DBCHARSET, 
                     DBUSER,
                     DBPASSWORD
                 );
@@ -61,5 +61,22 @@ class db
 
         // return the statement (now containing result set)
         return $statement;
+    }
+
+    public static function find($sql, $substitutions = array())
+    {
+        $rs = static::query($sql, $substitutions);
+
+        foreach($rs as $row)
+        {
+            return $row;
+        }
+
+        return null;
+    }
+
+    public static function lastInsertId()
+    {
+        return static::pdo()->lastInsertId();
     }
 }
